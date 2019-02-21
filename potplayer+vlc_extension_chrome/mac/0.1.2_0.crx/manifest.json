@@ -1,0 +1,41 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "core/webext/utils/EventEmitter.js", "core/webext/core/base.js", "core/webext/core/chrome.storage.js", "core/webext/core/chrome.runtime.js", "core/webext/core/chrome.tabs.js", "core/webext/core/chrome.browserAction.js", "core/webext/core/chrome.notifications.js", "core/webext/core/chrome.contextMenus.js", "core/background.js", "core/clipboard.js", "termlib_parser.js", "command.js", "send.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "data/icons/128.png",
+         "16": "data/icons/16.png",
+         "256": "data/icons/256.png",
+         "32": "data/icons/32.png",
+         "48": "data/icons/48.png",
+         "64": "data/icons/64.png"
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "data/inject.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "description": "Detect streamable video and audio sources and offer to play them in VLC multimedia player",
+   "homepage_url": "http://add0n.com/play-in.html",
+   "icons": {
+      "128": "data/icons/128.png",
+      "16": "data/icons/16.png",
+      "256": "data/icons/256.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnnPl9n5uceBlVF6HofxjmmQmr0c0iV6DdlkSKqhLzSPwlXZ7zTvbTjzvw8dYfh5BEhCyVm2qdP8eDJU9Hg+itGnsfODlJvG7Brcrjp3vfKOc9m4N49C41Lm1gJ4XJjds+9GaP+K84Gd1+W/eP53dsb3vcT4IfopuP8k8vmzy7Yit1NE0QY6X2P9WwzWOGgFrmjfSWndeEnFJAKNiZhteQmeJO6n1jiKc5rimaEt+ompPupS8l9QOGagnnSqIS8mOnJumRu7ODXJOYamI8lSpyaq4HDRbqEFf2kc6g72/ZnrqpSmusKwvUwebeEftEsJ8TSxaRbscbUkPJGdPSx2IIwIDAQAB",
+   "manifest_version": 2,
+   "name": "Play in VLC™",
+   "offline_enabled": true,
+   "options_ui": {
+      "chrome_style": true,
+      "page": "data/options/index.html"
+   },
+   "permissions": [ "storage", "notifications", "nativeMessaging", "downloads", "clipboardWrite", "contextMenus", "*://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.2"
+}
